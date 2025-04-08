@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'Default'
   # ou bien :
   # name: MyAgentPool  # si tu veux spécifier ton propre agent pool
 
