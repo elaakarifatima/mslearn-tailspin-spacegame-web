@@ -1,5 +1,20 @@
-pool: MyAgentPool
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+  # ou bien :
+  # name: MyAgentPool  # si tu veux spécifier ton propre agent pool
+
+variables:
+  buildConfiguration: 'Release'
+
 steps:
-- bash: echo hell- task: DotNetCoreCLI@2
+- bash: echo "hello"
+
+- task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+    displayName: 'Build .NET project'
