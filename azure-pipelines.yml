@@ -39,7 +39,6 @@ steps:
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
-    arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
-    displayName: 'Build .NET project'
+    arguments: '--no-restore --configuration Release'
+ 
