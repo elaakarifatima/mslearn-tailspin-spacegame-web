@@ -2,9 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'Default'
-  # ou bien :
-  # name: MyAgentPool  # si tu veux spécifier ton propre agent pool
+  name: Default  # ton agent tourne dans ce pool !
 
 variables:
   buildConfiguration: 'Release'
